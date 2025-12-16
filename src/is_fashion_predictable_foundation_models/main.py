@@ -9,7 +9,7 @@ from utils import (
     eval_predictions, load_forecast, load_time_series_csv, mean_errors_ranking, save_forecast
 )
 
-# Load the fashion time series data
+# Load the fashion time series data and remove the last year of data
 fashion_ts = load_time_series_csv("data/us_female_sneakers.csv")
 fashion_ts_train = fashion_ts.loc[:"2023-01-01"
                                  ]  # Split the dataset into training data up to January 1, 2023
@@ -25,7 +25,7 @@ foundation_models = {
 }
 
 if compute_prediction:
-    # Generate forecasts from both statistical and deep learning models
+    # Generate zero-shot predictions.
     models_forecasts = {
         model_name: model.predict(fashion_ts_train)
         for model_name, model in foundation_models.items()
