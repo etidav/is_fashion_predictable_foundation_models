@@ -42,7 +42,7 @@ class FoundationForecastModelType(str, Enum):
 
 class FoundationForecastModel(BaseModel, metaclass=abc.ABCMeta):
     """
-        Abstract for forecast model using neural methods. Mostly an overlay of neuralforecast library : https://nixtla.github.io/neuralforecast/ by Nixtla.
+        Abstract class for foundation models.
     """
 
     horizon: int = PREDICTION_ONE_YEAR
