@@ -24,10 +24,6 @@ cd is_fashion_predictable_foundation_models
 uv venv --python 3.11
 ```
 
-### 2. Create a virtual environment (Python 3.11)
-```bash
-uv venv --python 3.11
-```
 
 ### 3. Activate and install dependencies
 ```bash
